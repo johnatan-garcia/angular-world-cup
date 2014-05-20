@@ -1,0 +1,10 @@
+<h2>Teams</h2>
+<input type="text" ng-model="nameFilter" placeholder="Search..."/>
+<section class="list">
+  <a href="#/teams/{{team.id}}" ng-repeat="team in teamList | filter: searchFilter">
+  	<strong>{{$index + 1}}</strong>
+  	<img ng-src="img/flags/{{team.flagimage}}" />
+  	<span>{{team.name}}</span>
+  	<small>{{team.continent}}</small>
+  </a>
+</section>

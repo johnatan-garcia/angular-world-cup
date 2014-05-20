@@ -1,0 +1,26 @@
+<h2>{{team.name}}</h2>
+<span>{{team.continent}}</span>
+<img ng-src="img/flags/{{team.flagimage}}" />
+<article>
+  <div ng-if="team.profile.qualification">
+    <h3>How they qualified</h3>
+    <p ng-bind-html="team.profile.qualification"></p>
+  </div>
+  <div ng-if="team.profile.history">
+    <h3>FIFA World Cup finals history</h3>
+    <p ng-bind-html="team.profile.history"></p>
+  </div>
+  <div ng-if="team.profile.crop">
+    <h3>The current crop</h3>
+    <p ng-bind-html="team.profile.crop"></p>
+  </div>
+  <div ng-if="team.profile.keyplayers">
+    <h3>The key players</h3>
+    <p ng-bind-html="team.profile.keyplayers"></p>
+  </div>
+  <div>
+    <span><strong>Coach: </strong>{{team.profile.coach}}</span>
+    <span><strong>Best performances in a FIFA competition: </strong>{{team.profile.bestperformances}}</span>
+    <span><strong>Former stars: </strong>{{team.profile.formerstars}}</span>
+  </div>
+</article>
